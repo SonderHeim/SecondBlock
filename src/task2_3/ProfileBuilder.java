@@ -21,18 +21,22 @@ public class ProfileBuilder {
 
         System.out.println("Введите возраст: ");
         age = scanner.nextInt();
-        while (age < 0 || age > 150){
+        while (age < 0 || age > 150) {
             System.out.println("Некорректный возраст, введите ещё раз: ");
             age = scanner.nextInt();
         }
 
+        printData(name, surname, country, age);
+    }
+
+    public static void printData(String name, String surname, String country, int age) {
         System.out.println("=== Профиль ===");
         System.out.println(
-                "Имя: " + name
-                + "\nВозраст: " + age
-                + "\nГод рождения: " + (2026 - age)
-                + "\nГород: " + country
-                + "\nДо пенсси (65 лет) осталось: " + (65 - age) + " лет"
+                "Имя: " + name + " " + surname
+                        + "\nВозраст: " + age
+                        + "\nГод рождения: " + (2026 - age)
+                        + "\nГород: " + country
+                        + "\nДо пенсси (65 лет) осталось: " + (65 - age) + " лет"
         );
     }
 }
