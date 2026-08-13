@@ -7,6 +7,11 @@ public class SmartCalc {
         var secondNum = 0;
         char operation = '+';
 
+        calculate(firstNum, secondNum, operation);
+
+    }
+
+    public static void calculate(int firstNum, int secondNum, char operation) {
         var result = switch (operation) {
             case '+' -> firstNum + secondNum;
             case '-' -> firstNum - secondNum;
@@ -16,7 +21,11 @@ public class SmartCalc {
                     throw new ArithmeticException("Делить на ноль нельзя!");
                 yield firstNum / secondNum;
             }
-            case '%' -> firstNum % secondNum;
+            case '%' -> {
+                if (secondNum == 0)
+                    throw new ArithmeticException("Брать остаток от деления на ноль нельзя!");
+                yield firstNum % secondNum;
+            }
             default -> throw new IllegalArgumentException("Неизвестная операция");
         };
 

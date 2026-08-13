@@ -5,6 +5,13 @@ public class GradeConverter {
     public static void main(String[] args) {
         int score = 101;
 
+        gradePrint(score);
+
+        markPrint(score);
+
+    }
+
+    public static void gradePrint(int score) {
         if (score > 100) {
             System.out.println("Недопустимая оценка");
         } else if (score >= 90) {
@@ -18,8 +25,10 @@ public class GradeConverter {
         } else {
             System.out.println("Недопустимая оценка");
         }
+    }
 
-        if (score > 100 || score < 0){
+    public static void markPrint(int score) {
+        if (score > 100 || score < 0) {
             System.out.println("Недопустимая оценка");
         } else {
 
