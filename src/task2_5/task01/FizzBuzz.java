@@ -3,7 +3,13 @@ package task2_5.task01;
 public class FizzBuzz {
 
     public static void main(String[] args) {
-        for (int i = 0; i <= 100; i++) {
+        int i = 0;
+
+        fizzBuzzPrinter(i);
+    }
+
+    public static void fizzBuzzPrinter (int i) {
+        for (; i <= 100; i++) {
             if (i % 5 == 0 && i % 3 == 0)
                 System.out.print("FizzBuzz");
             else if (i % 3 == 0)
