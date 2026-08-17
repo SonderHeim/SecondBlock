@@ -8,7 +8,6 @@ public class SmartCalc {
         char operation = '+';
 
         calculate(firstNum, secondNum, operation);
-
     }
 
     public static void calculate(int firstNum, int secondNum, char operation) {

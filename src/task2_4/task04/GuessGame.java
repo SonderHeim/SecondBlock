@@ -10,7 +10,6 @@ public class GuessGame {
         guessChecker(secret, 35);
         guessChecker(secret, 42);
         guessChecker(secret, 50);
-
     }
 
     public static void guessChecker(int secret, int guess) {

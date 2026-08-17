@@ -6,9 +6,7 @@ public class GradeConverter {
         int score = 101;
 
         gradePrint(score);
-
         markPrint(score);
-
     }
 
     public static void gradePrint(int score) {

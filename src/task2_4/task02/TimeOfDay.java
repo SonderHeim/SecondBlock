@@ -10,9 +10,7 @@ public class TimeOfDay {
         LocalDateTime time = LocalDateTime.now();
 
         dayType(time);
-
         workTime(time);
-
     }
 
     public static void dayType(LocalDateTime time) {
