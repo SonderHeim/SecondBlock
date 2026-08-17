@@ -6,21 +6,21 @@ import java.util.List;
 public class PrimeNumbers {
 
     public static void main(String[] args) {
-        NumberStorage numberStorage = simpleNumberFinder();
+        int topNumber = 100;
 
-        for (int i = 0; i < numberStorage.simpleNumbers.size(); i++) {
-            System.out.print(numberStorage.simpleNumbers.get(i) + " ");
-        }
+        NumberStorage numberStorage = simpleNumberFinder(topNumber);
+
+        printArray(numberStorage);
         System.out.println();
         System.out.println("Всего простых чисел: " + numberStorage.count);
     }
 
-    public static NumberStorage simpleNumberFinder () {
+    public static NumberStorage simpleNumberFinder(int topNumber) {
         int count = 0;
 
         List<Integer> array = new ArrayList<>();
 
-        for (int i = 2; i <= 100; i++) {
+        for (int i = 2; i <= topNumber; i++) {
             boolean isPrime = true;
 
             for (int j = 2; j <= Math.sqrt(i); j++) {
@@ -30,7 +30,7 @@ public class PrimeNumbers {
                 }
             }
 
-            if (isPrime){
+            if (isPrime) {
                 count++;
                 array.add(i);
             }
@@ -39,5 +39,12 @@ public class PrimeNumbers {
         return new NumberStorage(count, array);
     }
 
-    public record NumberStorage(int count, List<Integer> simpleNumbers) {}
+    public record NumberStorage(int count, List<Integer> simpleNumbers) {
+    }
+
+    public static void printArray(NumberStorage numberStorage) {
+        for (int i = 0; i < numberStorage.simpleNumbers.size(); i++) {
+            System.out.print(numberStorage.simpleNumbers.get(i) + " ");
+        }
+    }
 }
