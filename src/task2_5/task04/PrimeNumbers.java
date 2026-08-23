@@ -10,9 +10,7 @@ public class PrimeNumbers {
 
         NumberStorage numberStorage = simpleNumberFinder(topNumber);
 
-        printArray(numberStorage);
-        System.out.println();
-        System.out.println("Всего простых чисел: " + numberStorage.count);
+        printResult(numberStorage);
     }
 
     public static NumberStorage simpleNumberFinder(int topNumber) {
@@ -42,9 +40,11 @@ public class PrimeNumbers {
     public record NumberStorage(int count, List<Integer> simpleNumbers) {
     }
 
-    public static void printArray(NumberStorage numberStorage) {
+    public static void printResult(NumberStorage numberStorage) {
         for (int i = 0; i < numberStorage.simpleNumbers.size(); i++) {
             System.out.print(numberStorage.simpleNumbers.get(i) + " ");
         }
+        System.out.println();
+        System.out.println("Всего простых чисел: " + numberStorage.count);
     }
 }
