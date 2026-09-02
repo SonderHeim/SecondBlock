@@ -4,6 +4,10 @@ public class StringAnalyzer {
     public static void main(String[] args) {
         String line = " 123 - is numbers. World.";
 
+        printResults(line);
+    }
+
+    public static void printResults(String line) {
         System.out.println("Строка: " + line);
         System.out.println("Длина: " + line.length());
         System.out.println("В верхнем регистре: " + line.toUpperCase());
@@ -18,7 +22,7 @@ public class StringAnalyzer {
         worldToJava(line);
     }
 
-    public static void spaceCount (String line) {
+    public static void spaceCount(String line) {
         int count = 0;
         for (int i = 0; i < line.length(); i++) {
             if (line.charAt(i) == ' ')
@@ -31,36 +35,36 @@ public class StringAnalyzer {
         System.out.println("Без пробелов по краям: " + line.trim());
     }
 
-    public static void countOfLetters (String line) {
+    public static void countOfLetters(String line) {
         int count = 0;
         for (int i = 0; i < line.length(); i++) {
-            if (Character.isLetter(line.charAt(i))){
+            if (Character.isLetter(line.charAt(i))) {
                 count++;
             }
         }
         System.out.println("Количество букв: " + count);
     }
 
-    public static void countOfDigits (String line) {
+    public static void countOfDigits(String line) {
         int count = 0;
         for (int i = 0; i < line.length(); i++) {
-            if (Character.isDigit(line.charAt(i))){
+            if (Character.isDigit(line.charAt(i))) {
                 count++;
             }
         }
         System.out.println("Количество цифр: " + count);
     }
 
-    public static void isContainWorld (String line) {
-        if (line.contains("World")){
+    public static void isContainWorld(String line) {
+        if (line.contains("World")) {
             System.out.println("Содержит слово \"World\": Да");
         } else {
             System.out.println("Содержит слово \"World\": Нет");
         }
     }
 
-    public static void firstAndLastO (String line) {
-        if (line.indexOf('o') == -1){
+    public static void firstAndLastO(String line) {
+        if (line.indexOf('o') == -1) {
             System.out.println("В строке нет букв o");
         } else {
             System.out.println("Первое вхождение \"o\": индекс " + line.indexOf('o'));

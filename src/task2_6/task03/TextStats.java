@@ -8,6 +8,10 @@ public class TextStats {
         String line = "Шла Саша по шоссе и сосала сушку. Триста тридцать три.";
         ArrayList<String> strings = new ArrayList<>(List.of(line.split(" ")));
 
+        printResults(line, strings);
+    }
+
+    public static void printResults(String line, ArrayList<String> strings) {
         wordNumber(strings);
         symbolNumber(line);
         longestWord(strings);
