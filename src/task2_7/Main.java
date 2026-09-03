@@ -1,14 +1,17 @@
 package task2_7;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
         String text = "hello  buddy my friend", email = "yandex@ya.ru", word = "А роза упала на лапу Азора";
-        System.out.println(countWords(text));
-        System.out.println(isValidEmail(email));
-        System.out.println(isPalindrome(word));
+
+        printData(text, email, word);
+    }
+
+    public static void printData(String text, String email, String word) {
+        System.out.println("Кол-во слов в сообщении: " + countWords(text));
+        System.out.println(isValidEmail(email) ? "Email подан правильно." : "Некорректный email!");
+        System.out.println(isPalindrome(word) ? "Сообщение - палиндром." : "Сообщение - не палиндром.");
     }
 
     public static int countWords (String text){
